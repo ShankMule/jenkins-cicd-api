@@ -38,13 +38,14 @@
 						<environment>DEV</environment>
 						<target>Cloudhub-US-East-2</target>
 						<releaseChannel>EDGE</releaseChannel>
-						<server>Repository</server>
+						<username>ShankMar13</username>
+						<password>ShankMar@13</password>
 						<applicationName>product-app-sapi</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
 						<deploymentSettings>
-                            <generateDefaultPublicUrl>true</generateDefaultPublicUrl>
-                        </deploymentSettings>
+							<generateDefaultPublicUrl>true</generateDefaultPublicUrl>
+						</deploymentSettings>
 					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
