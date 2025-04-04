@@ -28,7 +28,7 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>4.3.0</version>
+				<version>3.8.2</version>
 				<extensions>true</extensions>
 				<configuration>
 					<classifier>mule-application</classifier>
@@ -37,9 +37,9 @@
 						<provider>MC</provider>
 						<environment>DEV</environment>
 						<target>Cloudhub-US-East-2</target>
-						<releaseChannel>EDGE</releaseChannel>
 						<username>ShankMar13</username>
 						<password>ShankMar@13</password>
+						<muleVersion>4.8.1</muleVersion>
 						<applicationName>product-app-sapi</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
@@ -82,9 +82,9 @@
 
 	<repositories>
 		<repository>
-			<id>anypoint-exchange-v2</id>
+			<id>anypoint-exchange-v3</id>
 			<name>Anypoint Exchange</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v2/maven</url>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
 			<layout>default</layout>
 		</repository>
 		<repository>
@@ -115,7 +115,7 @@
 		<repository>
 			<id>anypoint-exchange-v3</id>
 			<name>Corporate Repository</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v2/organizations/c5fd79cf-263a-4712-99fe-41497e87ea01/maven</url>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/c5fd79cf-263a-4712-99fe-41497e87ea01/maven</url>
 			<layout>default</layout>
 		</repository>
 	</distributionManagement>
