@@ -17,7 +17,88 @@
 		<app.runtime>4.8.1</app.runtime>
 		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
 	</properties>
-
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-clean-plugin</artifactId>
+						<version>3.2.0</version>
+					</plugin>
+					<plugin>
+						<groupId>org.mule.tools.maven</groupId>
+						<artifactId>mule-maven-plugin</artifactId>
+						<version>3.8.2</version>
+						<extensions>true</extensions>
+						<configuration>
+							<classifier>mule-application</classifier>
+							<cloudhub2Deployment>
+								<!-- <uri>https://anypoint.mulesoft.com</uri>
+								<provider>MC</provider> -->
+								<environment>DEV</environment>
+								<!-- <target>Cloudhub-US-East-2</target>
+								<username>ShankMar13</username>
+								<password>ShankMar@13</password>
+								<muleVersion>4.8.1</muleVersion> -->
+								<applicationName>product-app-sapi-dev</applicationName>
+								<replicas>1</replicas>
+								<vCores>0.1</vCores>
+								<properties>
+									<http.port>8082</http.port>
+									<env>dev</env>
+									<api.id>20295853</api.id>
+									<anypoint.platform.client_id>796a88ba999c431296402fb3f825c8c5</anypoint.platform.client_id>
+									<anypoint.platform.client_secret>129c9e524cBc450f8CC9FAe11217d18C</anypoint.platform.client_secret>
+								</properties>
+							</cloudhub2Deployment>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>test</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-clean-plugin</artifactId>
+						<version>3.2.0</version>
+					</plugin>
+					<plugin>
+						<groupId>org.mule.tools.maven</groupId>
+						<artifactId>mule-maven-plugin</artifactId>
+						<version>3.8.2</version>
+						<extensions>true</extensions>
+						<configuration>
+							<classifier>mule-application</classifier>
+							<cloudhub2Deployment>
+								<!-- <uri>https://anypoint.mulesoft.com</uri>
+								<provider>MC</provider> -->
+								<environment>DEV</environment>
+								<!-- <target>Cloudhub-US-East-2</target> -->
+								<!-- <username>ShankMar13</username>
+								<password>ShankMar@13</password> -->
+								<!-- <muleVersion>4.8.1</muleVersion> -->
+								<applicationName>product-app-sapi-test</applicationName>
+								<replicas>1</replicas>
+								<vCores>0.1</vCores>
+								<properties>
+									<http.port>8082</http.port>
+									<env>test</env>
+									<api.id>20295854</api.id>
+									<anypoint.platform.client_id>dbeadb8b407e403f8300c840d2c915f7</anypoint.platform.client_id>
+									<anypoint.platform.client_secret>b8Ea61C7B2b4418A9a42f4A85949E56a</anypoint.platform.client_secret>
+								</properties>
+							</cloudhub2Deployment>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 	<build>
 		<plugins>
 			<plugin>
@@ -35,18 +116,22 @@
 					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<provider>MC</provider>
-						<environment>DEV</environment>
+						<!-- <environment>DEV</environment> -->
 						<target>Cloudhub-US-East-2</target>
 						<username>ShankMar13</username>
 						<password>ShankMar@13</password>
 						<muleVersion>4.8.1</muleVersion>
-						<applicationName>product-app-sapi</applicationName>
-						<replicas>1</replicas>
-						<vCores>0.1</vCores>
+						<!-- <applicationName>product-app-sapi</applicationName> -->
+						<!-- <replicas>1</replicas>
+						<vCores>0.1</vCores> -->
 						<deploymentSettings>
 							<generateDefaultPublicUrl>true</generateDefaultPublicUrl>
 						</deploymentSettings>
 					</cloudhub2Deployment>
+					<properties>
+						<anypoint.platform.base_uri>https://anypoint.mulesoft.com</anypoint.platform.base_uri>
+						<anypoint.platform.analytics_base_uri>https://analytics-ingest.anypoint.mulesoft.com</anypoint.platform.analytics_base_uri>
+					</properties>
 				</configuration>
 			</plugin>
 		</plugins>
