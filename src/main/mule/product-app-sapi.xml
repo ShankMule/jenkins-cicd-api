@@ -3,7 +3,7 @@
     <http:listener-config name="product-sapi-httpListenerConfig">
         <http:listener-connection host="0.0.0.0" port="8082" />
     </http:listener-config>
-    <apikit:config name="product-sapi-config" api="resource::c5fd79cf-263a-4712-99fe-41497e87ea01:product-sapi:1.0.0:raml:zip:product-sapi.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
+<apikit:config name="product-sapi-config" api="product-sapi.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
     <flow name="product-sapi-main">
         <http:listener config-ref="product-sapi-httpListenerConfig" path="/*">
             <http:response statusCode="#[vars.httpStatus default 200]">

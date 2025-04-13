@@ -66,13 +66,6 @@
 			<classifier>mule-plugin</classifier>
 		</dependency>
 		<dependency>
-			<groupId>c5fd79cf-263a-4712-99fe-41497e87ea01</groupId>
-			<artifactId>product-sapi</artifactId>
-			<version>1.0.0</version>
-			<classifier>raml</classifier>
-			<type>zip</type>
-		</dependency>
-		<dependency>
 			<groupId>org.mule.modules</groupId>
 			<artifactId>mule-apikit-module</artifactId>
 			<version>1.11.2</version>
