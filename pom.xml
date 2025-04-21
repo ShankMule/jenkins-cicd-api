@@ -14,8 +14,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<app.runtime>4.8.1</app.runtime>
-		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
+		<app.runtime>4.6.1</app.runtime>
+		<mule.maven.plugin.version>3.8.2</mule.maven.plugin.version>
 	</properties>
 	<profiles>
 		<profile>
@@ -120,7 +120,7 @@
 						<target>Cloudhub-US-East-2</target>
 						<username>ShankAprMule</username>
 						<password>ShankAprMule@13</password>
-						<muleVersion>4.8.1</muleVersion>
+						<muleVersion>4.6.1</muleVersion>
 						<!-- <applicationName>product-app-sapi</applicationName> -->
 						<!-- <replicas>1</replicas>
 						<vCores>0.1</vCores> -->
