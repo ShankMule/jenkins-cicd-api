@@ -48,9 +48,9 @@
 								<properties>
 									<http.port>8082</http.port>
 									<env>dev</env>
-									<api.id>20295853</api.id>
-									<anypoint.platform.client_id>796a88ba999c431296402fb3f825c8c5</anypoint.platform.client_id>
-									<anypoint.platform.client_secret>129c9e524cBc450f8CC9FAe11217d18C</anypoint.platform.client_secret>
+									<api.id>20308949</api.id>
+									<anypoint.platform.client_id>b21508108b8f420681f1fcf269a03eb8</anypoint.platform.client_id>
+									<anypoint.platform.client_secret>323982F1548346C793F820021Cf993eA</anypoint.platform.client_secret>
 								</properties>
 							</cloudhub2Deployment>
 						</configuration>
@@ -88,9 +88,9 @@
 								<properties>
 									<http.port>8082</http.port>
 									<env>test</env>
-									<api.id>20295854</api.id>
-									<anypoint.platform.client_id>dbeadb8b407e403f8300c840d2c915f7</anypoint.platform.client_id>
-									<anypoint.platform.client_secret>b8Ea61C7B2b4418A9a42f4A85949E56a</anypoint.platform.client_secret>
+									<api.id>20308950</api.id>
+									<anypoint.platform.client_id>3363d8db6520446590076646a3c86104</anypoint.platform.client_id>
+									<anypoint.platform.client_secret>568C8b53154140Cdb61dED892db63935</anypoint.platform.client_secret>
 								</properties>
 							</cloudhub2Deployment>
 						</configuration>
