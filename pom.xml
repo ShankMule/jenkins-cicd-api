@@ -4,7 +4,7 @@
 
 	<groupId>41660916-88f9-4f48-83b0-97b57dda1a3e</groupId>
 	<artifactId>product-app-sapi</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
 	<name>product-app-sapi</name>
@@ -44,7 +44,7 @@
 								<replicas>1</replicas>
 								<vCores>0.1</vCores>
 								<properties>
-									<http.port>8082</http.port>
+									<!-- <http.port>8082</http.port> -->
 									<env>dev</env>
 									<api.id>20308949</api.id>
 									<anypoint.platform.client_id>b21508108b8f420681f1fcf269a03eb8</anypoint.platform.client_id>
@@ -84,7 +84,7 @@
 								<replicas>1</replicas>
 								<vCores>0.1</vCores>
 								<properties>
-									<http.port>8082</http.port>
+									<!-- <http.port>8082</http.port> -->
 									<env>test</env>
 									<api.id>20308950</api.id>
 									<anypoint.platform.client_id>3363d8db6520446590076646a3c86104</anypoint.platform.client_id>
