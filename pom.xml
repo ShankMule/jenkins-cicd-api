@@ -14,6 +14,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<app.runtime>4.6.15</app.runtime>
 		<mule.maven.plugin.version>3.8.2</mule.maven.plugin.version>
+		<munit.version>3.3.0</munit.version>
 	</properties>
 	<profiles>
 		<profile>
@@ -33,13 +34,10 @@
 						<configuration>
 							<classifier>mule-application</classifier>
 							<cloudhub2Deployment>
-								<!-- <uri>https://anypoint.mulesoft.com</uri>
-								<provider>MC</provider> -->
+								<!-- <uri>https://anypoint.mulesoft.com</uri> <provider>MC</provider> -->
 								<environment>DEV</environment>
-								<!-- <target>Cloudhub-US-East-2</target>
-								<username>ShankMar13</username>
-								<password>ShankMar@13</password>
-								<muleVersion>4.8.1</muleVersion> -->
+								<!-- <target>Cloudhub-US-East-2</target> <username>ShankMar13</username> 
+									<password>ShankMar@13</password> <muleVersion>4.8.1</muleVersion> -->
 								<applicationName>product-app-sapi-dev</applicationName>
 								<replicas>1</replicas>
 								<vCores>0.1</vCores>
@@ -73,12 +71,10 @@
 						<configuration>
 							<classifier>mule-application</classifier>
 							<cloudhub2Deployment>
-								<!-- <uri>https://anypoint.mulesoft.com</uri>
-								<provider>MC</provider> -->
+								<!-- <uri>https://anypoint.mulesoft.com</uri> <provider>MC</provider> -->
 								<environment>TEST</environment>
 								<!-- <target>Cloudhub-US-East-2</target> -->
-								<!-- <username>ShankMar13</username>
-								<password>ShankMar@13</password> -->
+								<!-- <username>ShankMar13</username> <password>ShankMar@13</password> -->
 								<!-- <muleVersion>4.8.1</muleVersion> -->
 								<applicationName>product-app-sapi-test</applicationName>
 								<replicas>1</replicas>
@@ -120,8 +116,7 @@
 						<password>ShankAprMule@13</password>
 						<muleVersion>4.6.1</muleVersion>
 						<!-- <applicationName>product-app-sapi</applicationName> -->
-						<!-- <replicas>1</replicas>
-						<vCores>0.1</vCores> -->
+						<!-- <replicas>1</replicas> <vCores>0.1</vCores> -->
 						<deploymentSettings>
 							<generateDefaultPublicUrl>true</generateDefaultPublicUrl>
 						</deploymentSettings>
@@ -130,6 +125,28 @@
 						<anypoint.platform.base_uri>https://anypoint.mulesoft.com</anypoint.platform.base_uri>
 						<anypoint.platform.analytics_base_uri>https://analytics-ingest.anypoint.mulesoft.com</anypoint.platform.analytics_base_uri>
 					</properties>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.mulesoft.munit.tools</groupId>
+				<artifactId>munit-maven-plugin</artifactId>
+				<version>${munit.version}</version>
+				<executions>
+					<execution>
+						<id>test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>test</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<coverage>
+						<runCoverage>true</runCoverage>
+						<formats>
+							<format>html</format>
+						</formats>
+					</coverage>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -153,6 +170,26 @@
 			<artifactId>mule-apikit-module</artifactId>
 			<version>1.11.2</version>
 			<classifier>mule-plugin</classifier>
+		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.munit</groupId>
+			<artifactId>munit-runner</artifactId>
+			<version>3.3.0</version>
+			<classifier>mule-plugin</classifier>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.munit</groupId>
+			<artifactId>munit-tools</artifactId>
+			<version>3.3.0</version>
+			<classifier>mule-plugin</classifier>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mule.weave</groupId>
+			<artifactId>assertions</artifactId>
+			<version>1.2.1</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
